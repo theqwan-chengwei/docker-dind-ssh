@@ -2,7 +2,7 @@
 
 set -e
 
-echo "root:$1" | chpasswd
+echo "root:$ROOT_PASS" | chpasswd
 /etc/init.d/sshd restart
 
 if [ "$#" -eq 0 -o "${1:0:1}" = '-' ]; then
